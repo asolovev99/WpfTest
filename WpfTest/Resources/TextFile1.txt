@@ -1,0 +1,15 @@
+﻿(byte[])(oReader["PictureID"]);
+
+ImageSource PictureID
+using (var stream = new MemoryStream(pictureIdByte))
+    {
+        getInfo.PictureID = BitmapFrame.Create(stream,
+                                BitmapCreateOptions.None, BitmapCacheOption.OnLoad);
+    }
+
+INSERT INTO adventureworks.dbo.myimages values (1, (SELECT * FROM OPENROWSET(BULK N'C:\img\1.png', SINGLE_BLOB) as T1))
+
+MessageBoxResult result = MessageBox.Show("text", "nazv", MessageBoxButton.YesNoCancel); 
+MessageBoxResult.Yes
+MessageBoxResult.No
+MessageBoxResult.Cancel
