@@ -1,5 +1,7 @@
 ﻿(byte[])(oReader["PictureID"]);
 
+image    Byte[]    GetBytes и GetStream
+
 ImageSource PictureID
 using (var stream = new MemoryStream(pictureIdByte))
     {
@@ -13,3 +15,5 @@ MessageBoxResult result = MessageBox.Show("text", "nazv", MessageBoxButton.YesNo
 MessageBoxResult.Yes
 MessageBoxResult.No
 MessageBoxResult.Cancel
+
+https://docs.google.com/spreadsheets/d/160s8kJYtyvPyT3rD-v06qMDpW_zEToa9JkhHYDhtEYk/edit#gid=882186640
