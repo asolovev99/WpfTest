@@ -90,12 +90,18 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <None Include="Resources\import.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\TextFile1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\image.png" />
+    <Content Include="Resources\Script1.sql" />
+    <Content Include="Resources\ScriptDemo.sql" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

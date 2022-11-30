@@ -17,3 +17,19 @@ MessageBoxResult.No
 MessageBoxResult.Cancel
 
 https://docs.google.com/spreadsheets/d/160s8kJYtyvPyT3rD-v06qMDpW_zEToa9JkhHYDhtEYk/edit#gid=882186640
+
+SELECT TOP 4 ProductName, ProductCount * Price AS TotalSum
+FROM Products
+ORDER BY TotalSum DESC, ProductName asc, ProductCount * Price
+    OFFSET 2 ROWS
+    FETCH NEXT 3 ROWS ONLY
+WHERE NOT Manufacturer = 'Samsung' and Manufacturer NOT IN ('Samsung', 'Xiaomi', 'Huawei')
+and Price NOT BETWEEN 20000 AND 40000 and ProductName LIKE 'iPhone [^1-6]%'
+
+% _ [ ] [ - ] [ ^ ]
+
+UPDATE Products
+SET Manufacturer = 'Apple Inc.'
+FROM
+(SELECT TOP 2 FROM Products WHERE Manufacturer='Apple') AS Selected
+WHERE Products.Id = Selected.Id
